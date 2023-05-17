@@ -46,14 +46,14 @@ class _PayWithMomoState extends State<PayWithMomo> {
           Random random = Random();
           int numbers = random.nextInt(1000000);
           String transactionId =
-              "ffe037792fc5a11efgfghjfe" + numbers.toString();
+              "6af17b00f4b211ed8d4a97599ea65359" + numbers.toString();
           var headers = {'type': 'MOMO', 'Content-Type': 'application/json'};
           var request = http.Request('POST',
               Uri.parse('https://opay-api.oltranz.com/opay/paymentrequest'));
           request.body = convert.json.encode({
             "telephoneNumber": "$number",
             "amount": 5,
-            "organizationId": "45658bf9-d197-4c75-bc7d-a479d8a794d3",
+            "organizationId": "cbaf5023-e848-4900-85c9-b419c0ac58b1",
             "description": "Payment for buying products",
             "callbackUrl":
                 "https://ecommerce-production-9f2a.up.railway.app/api/paymentCallBack",
